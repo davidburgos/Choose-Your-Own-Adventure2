@@ -31,15 +31,24 @@ public class RoomFragment extends Fragment {
         @Override
         public void onClick(View v) {
 
-            Random random = new Random(2);
+            Random random = new Random();
+            int rand = random.nextInt(100);
 
-            if (!random.nextBoolean()) {
+            if(rand <= 10){
                 getFragmentManager().beginTransaction().
-                        replace(R.id.container, (random.nextBoolean() ? new RoomFragment() : new AlleyFragment())).
+                        replace(R.id.container, new GameOver()).
+                        commit();
+            }else if(rand >10 && rand <=60){
+                getFragmentManager().beginTransaction().
+                        replace(R.id.container,  new AlleyFragment()).
+                        commit();
+            }else if(rand >60 && rand <=80){
+                getFragmentManager().beginTransaction().
+                        replace(R.id.container, new RoomFragment()).
                         commit();
             }else{
                 getFragmentManager().beginTransaction().
-                        replace(R.id.container, new GameOver()).
+                        replace(R.id.container, (random.nextBoolean() ? new RoomFragment() : new AlleyFragment())).
                         commit();
             }
         }
