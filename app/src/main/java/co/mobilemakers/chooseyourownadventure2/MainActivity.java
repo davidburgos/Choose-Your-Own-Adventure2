@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import java.util.Random;
+
 
 public class MainActivity extends Activity {
 
@@ -13,8 +15,10 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        Random num = new Random(2);
+
         getFragmentManager().beginTransaction().
-                add(R.id.container, new AlleyFragment()).
+                add(R.id.container, num.nextBoolean()? new RoomFragment(): new AlleyFragment()).
                 commit();
     }
 

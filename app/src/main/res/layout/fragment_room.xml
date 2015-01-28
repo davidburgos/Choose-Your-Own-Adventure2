@@ -2,12 +2,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.user.ownadventure2.RoomFragment"
-    android:orientation="vertical">
+    tools:context="co.mobilemakers.yourownadventure.RoomFragment"
+    android:orientation="vertical"
+    android:padding="16dp">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-        android:text="@string/hello_blank_fragment" />
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:text="@string/text_message_room"
+        android:id="@+id/textView_message" />
 
     <LinearLayout
         android:orientation="horizontal"
@@ -20,13 +22,13 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="New Button"
+            android:text="@string/text_button_enter_door_1"
             android:id="@+id/button" />
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="New Button"
+            android:text="@string/text_button_enter_door_2"
             android:id="@+id/button2" />
     </LinearLayout>
 
