@@ -18,12 +18,19 @@
     <string name="title_activity_main_activity2">MainActivity2</string>
     <string name="title_activity_game_over">GameOver</string>
     <string name="title_win">You\'ve reached the gold!</string>
-    <string name="title_loose">You\'ve fallen into pit of despair</string>
+    <string name="title_lose">You\'ve fallen into pit of despair</string>
     <string name="title_activity_level_selection">Level_selection</string>
     <string name="txt_title_level_selection">Select a Difficulty</string>
     <string name="txt_btn_insane">Insane</string>
     <string name="txt_btn_hard">Hard</string>
     <string name="txt_btn_normal">Normal</string>
     <string name="txt_btn_easy">Easy</string>
+    <string name="pref_username_title">UserName</string>
+    <string name="pref_username_summary">Username for a personalized message</string>
+    <string name="pref_category_customization">Customization</string>
+    <string name="pref_win_message_title">Win Message</string>
+    <string name="pref_lose_message_title">Lose Message</string>
+    <string name="pref_lose_message_summary">Personalize the lose message</string>
+    <string name="pref_win_message_summary">Personalize the win message</string>
 
 </resources>

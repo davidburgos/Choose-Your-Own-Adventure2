@@ -22,7 +22,7 @@ public class GameOver extends Fragment {
 
         View RootView = inflater.inflate(R.layout.activity_game_over,container,false);
         Random random = new Random();
-        String parameter = (random.nextInt(30)<10?getString(R.string.title_win):getString(R.string.title_loose));
+        String parameter = (random.nextInt(30)<10?getString(R.string.title_win):getString(R.string.title_lose));
 
         TextView textViewBody = (TextView)RootView.findViewById(R.id.txtMessage);
         textViewBody.setText(parameter);

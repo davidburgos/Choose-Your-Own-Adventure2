@@ -1,5 +1,6 @@
 package co.mobilemakers.chooseyourownadventure2;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -38,6 +39,9 @@ public class Level_selection extends ActionBarActivity {
                      mDifficulty = Difficulty.EASY;
                      break;
             }
+
+            Intent intent = new Intent(Level_selection.this, MainActivity.class);
+            startActivity(intent);
         }
     };
 
@@ -69,7 +73,7 @@ public class Level_selection extends ActionBarActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_level_selection, menu);
+        getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
     }
 
@@ -80,11 +84,19 @@ public class Level_selection extends ActionBarActivity {
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+        Boolean handled = false;
+
+        switch (id)
+        {
+            case R.id.action_settings:
+                Intent intent = new Intent(this,AppSettingsActivity.class);
+                startActivityForResult(intent,0);
+                handled = true;
+                break;
         }
 
-        return super.onOptionsItemSelected(item);
+        if (!handled) handled=super.onOptionsItemSelected(item);
+
+        return handled;
     }
 }
