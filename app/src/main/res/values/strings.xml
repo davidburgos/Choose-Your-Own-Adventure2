@@ -32,5 +32,6 @@
     <string name="pref_lose_message_title">Lose Message</string>
     <string name="pref_lose_message_summary">Personalize the lose message</string>
     <string name="pref_win_message_summary">Personalize the win message</string>
+    <string name="default_username">Player 1</string>
 
 </resources>
