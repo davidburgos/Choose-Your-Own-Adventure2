@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="difficulty_options">
+        <item>Insane</item>
+        <item>Hard</item>
+        <item>Normal</item>
+        <item>Easy</item>
+    </string-array>
+</resources>

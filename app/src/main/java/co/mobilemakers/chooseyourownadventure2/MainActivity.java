@@ -17,7 +17,7 @@ public class MainActivity extends Activity {
         Random num = new Random();
 
         getFragmentManager().beginTransaction().
-                add(R.id.container, num.nextBoolean()? new RoomFragment(): new AlleyFragment()).
+                add(R.id.container, num.nextBoolean()? new RoomFragment(): new AlleyFragment()).addToBackStack("Start").
                 commit();
     }
 
